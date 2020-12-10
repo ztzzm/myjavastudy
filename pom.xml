@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- project报红 clean -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- modelVersion 描述POM文件是遵从哪个版本的项目描述符 -->
     <modelVersion>4.0.0</modelVersion>
+    <!-- SpringBoot的父级依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+        <!-- SpringBoot版本号 -->
         <version>2.3.3.RELEASE</version>
+        <!-- <relativePath/>设定一个空值默认值为../pom.xml 表示将始终从父级仓库中获取，不从本地路径获取 -->
+        <!-- MAVEN构建jar包时候查找顺序：relativePath元素中的地址–本地仓库–远程仓库 -->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <!-- MAVEN坐标 -->
     <groupId>my.java</groupId>
     <artifactId>study</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>study</name>
+    <!-- 项目的描述,MAVEN产生的文档用 -->
     <description>Demo project for Spring Boot</description>
-
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>LiGuoLei</name>
+        </developer>
+    </developers>
+    <!-- 值占位符,在 POM 中的任意位置都可以访问它们的值 -->
     <properties>
         <java.version>11</java.version>
     </properties>
-
+    <!-- 依赖关系 -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,12 +44,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <!-- 生成 -->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 报红原因 jar包没有下载 -->
+                <!-- 默认没有指定版本号,可以添加版本号 -->
+                <!-- 可以修改settings镜像的属性<mirrorOf>*</mirrorOf> -->
+                <version>2.3.3.RELEASE</version>
             </plugin>
         </plugins>
     </build>
