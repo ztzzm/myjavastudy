@@ -6,6 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- SpringCloud父pom必须为pom -->
     <packaging>pom</packaging>
+    <!-- 子模块 -->
+    <modules>
+        <module>eureka</module>
+    </modules>
     <!-- SpringBoot的父级依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
