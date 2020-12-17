@@ -12,6 +12,8 @@
         <module>eureka</module>
         <!-- 系统模块 -->
         <module>system</module>
+        <!-- 网关路由 -->
+        <module>gateway</module>
     </modules>
     <!-- SpringBoot的父级依赖 -->
     <parent>

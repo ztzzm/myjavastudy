@@ -1,3 +1,3 @@
-# 1.添加system模块(启动类添加@EnableEurekClient)模块添加后,父pom会自动添加子模块
-# 2.idea导入项目所有依赖都确定下载但是启动仍然找不到类可以勾选使用maven构建File-Settings-Maven-Runner
-# 3.SpringBoot的Services窗口模块例如SystemApplication如果是灰色的表示没有保存保存配置即可
+# 1.eureka保留spring-cloud-starter-netflix-eureka-server需要@EnableEurekaServer注解
+# 2.system保留spring-cloud-starter-netflix-eureka-client和spring-boot-starter-web需要@EnableEurekaClient和@Controller注解
+# 3.spring-boot-starter-web>spring-boot-starter
