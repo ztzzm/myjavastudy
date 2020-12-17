@@ -5,7 +5,5 @@ server:
   port: 9001
 eureka:
   client:
-    # 注册到注册中心
-    fetch-registry: true
-    # 表示需要获取其他服务
-    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
