@@ -1,4 +1,4 @@
-package my.java.study;
+package my.java.eureka;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
