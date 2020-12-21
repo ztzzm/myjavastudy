@@ -1,8 +1,18 @@
+server:
+  port: 9000
 spring:
   application:
     name: gateway
-server:
-  port: 9000
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: system
+          uri: lb://system
+          predicates:
+           - Path=/system/**
 eureka:
   client:
     service-url:
