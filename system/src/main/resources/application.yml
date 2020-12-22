@@ -1,7 +1,12 @@
 spring:
   application:
     name: system
-
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.50.13.34:3306/smsehall?characterEncoding=UTF8&autoReconnect=true
+    username: smsehall
+    password: 7quG6sEnQTj8
+    data-username:
 server:
   servlet:
     context-path: /system
@@ -10,3 +15,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+
