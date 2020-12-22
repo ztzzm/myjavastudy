@@ -10,7 +10,7 @@
 ## mybatis步骤
 + 添加依赖
     
-  ```java
+  ```maven
     //Spring整合mybatis
     <dependency>
       <groupId>org.mybatis.spring.boot</groupId>
